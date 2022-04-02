@@ -7,6 +7,7 @@ class MyCustomSwitch : public Component, public Switch {
     int _address = 25015010;
     int _pin = 13;
     int _period = 263;
+    int _times = 2;
  
  public:
     MyCustomSwitch(int unit) {
@@ -18,7 +19,7 @@ class MyCustomSwitch : public Component, public Switch {
     }
 
     void write_state(bool state) override {
-        NewRemoteTransmitter transmitter(_address, _pin, _period);
+        NewRemoteTransmitter transmitter(_address, _pin, _period, _times);
         transmitter.sendUnit(_unit, state);
         publish_state(state);
     }
