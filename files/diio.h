@@ -4,8 +4,8 @@
 class MyCustomSwitch : public Component, public Switch {
  private:
     int _unit;
-    int _address = 25015010;
-    int _pin = 13;
+    int _address = 6664146;
+    int _pin = 2;
     int _period = 263;
     int _times = 2;
  
