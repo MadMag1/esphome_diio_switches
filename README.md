@@ -17,18 +17,16 @@ Amazing [Randy Simons, AKA 1technophile](https://github.com/1technophile) made [
 switch:
 - platform: custom
   lambda: |-
-    auto switch0 = new MyCustomSwitch(int(0));
+    auto switch0 = new MyCustomSwitch(int(8));
     App.register_component(switch0);
-    auto switch1 = new MyCustomSwitch(int(1));
+    auto switch1 = new MyCustomSwitch(int(9));
     App.register_component(switch1);
-    auto switch2 = new MyCustomSwitch(int(2));
-    App.register_component(switch2);
-    return {switch0, switch1, switch2};
+    return {switch0, switch1};
 
   switches:
-    - name: "Switch 1"
-    - name: "Switch 2"
-    - name: "Switch 3"
+    - name: "Bel"
+    - name: "Keukenlamp"
+    
 ```
 
 also add this to the `esphome:` section:
